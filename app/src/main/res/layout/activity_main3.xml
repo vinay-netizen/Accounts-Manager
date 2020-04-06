@@ -10,11 +10,11 @@
         android:id="@+id/button"
         android:layout_width="114dp"
         android:layout_height="47dp"
-        android:layout_marginTop="192dp"
+        android:layout_marginTop="296dp"
         android:background="@color/colorPrimary"
         android:text="SAVE CONTACT"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.207"
+        app:layout_constraintHorizontal_bias="0.208"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -22,11 +22,12 @@
         android:id="@+id/editText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="44dp"
+        android:layout_marginTop="120dp"
         android:ems="10"
         android:hint="ENTER NAME"
         android:inputType="textPersonName"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.565"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -34,11 +35,12 @@
         android:id="@+id/editText5"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="108dp"
+        android:layout_marginTop="200dp"
         android:ems="10"
         android:hint="ENTER CONTACT"
         android:inputType="textPersonName"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.565"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -46,11 +48,11 @@
         android:id="@+id/textView8"
         android:layout_width="176dp"
         android:layout_height="41dp"
-        android:layout_marginTop="372dp"
-        android:textColor="@color/colorPrimaryDark"
+        android:layout_marginTop="472dp"
+        android:textColor="@color/colorPrim"
         android:textSize="30sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.434"
+        app:layout_constraintHorizontal_bias="0.421"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -58,8 +60,8 @@
         android:id="@+id/textView9"
         android:layout_width="177dp"
         android:layout_height="42dp"
-        android:layout_marginTop="460dp"
-        android:textColor="@color/colorPrimaryDark"
+        android:layout_marginTop="548dp"
+        android:textColor="@color/colorPrim"
         android:textSize="30sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.431"
@@ -70,11 +72,12 @@
         android:id="@+id/textView10"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="292dp"
+        android:layout_marginTop="396dp"
         android:text="CONTACT DETAILS: "
-        android:textColor="@color/colorPrimaryDark"
+        android:textColor="@color/colorPrim"
         android:textSize="30sp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.462"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -82,11 +85,24 @@
         android:id="@+id/proc"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="192dp"
+        android:layout_marginTop="296dp"
         android:background="@color/colorp"
         android:text="PROCEED"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.792"
+        app:layout_constraintHorizontal_bias="0.733"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="36dp"
+        android:text="ENTER CONTACT DETAILS"
+        android:textColor="@color/colorcons"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.545"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 

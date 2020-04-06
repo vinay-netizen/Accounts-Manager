@@ -27,6 +27,8 @@ public class Main2Activity extends AppCompatActivity {
     ListView x;
     ArrayList<String> myname = new ArrayList<>();
 
+    setdeets x2;
+
     DatabaseReference main2ref;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,20 +41,26 @@ public class Main2Activity extends AppCompatActivity {
 
         x = (ListView) findViewById(R.id.lists);
 
-
+        x2 = new setdeets();
 
 
 
         main2ref = FirebaseDatabase.getInstance().getReference();
-        main2ref = main2ref.child("NAME");
+        main2ref = main2ref.child("CONTACT DETAILS");
 
 
 
         main2ref.addChildEventListener(new ChildEventListener() {
             @Override
             public void onChildAdded(@NonNull DataSnapshot dataSnapshot, @Nullable String s) {
-                String value = dataSnapshot.getValue(String.class);
+                /*String value = dataSnapshot.getValue(String.class);
                 myname.add(value);
+                x.setAdapter(mArrayAdapter);
+                mArrayAdapter.notifyDataSetChanged();*/
+
+                x2 = dataSnapshot.getValue(setdeets.class);
+                String names = x2.getPerson_name();
+                myname.add(names);
                 x.setAdapter(mArrayAdapter);
                 mArrayAdapter.notifyDataSetChanged();
             }
@@ -81,7 +89,7 @@ public class Main2Activity extends AppCompatActivity {
         x.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                Toast.makeText(Main2Activity.this, "contact " + position + " " +  myname.get(position),Toast.LENGTH_LONG).show();
+                Toast.makeText(Main2Activity.this, "contact " + position + " " +  myname.get(position),Toast.LENGTH_SHORT).show();
                 Intent intent = new Intent(Main2Activity.this,Main4Activity.class);
                 String forward = myname.get(position);
                 intent.putExtra("CONTACT NAME",forward);

@@ -52,7 +52,7 @@ public class Main4Activity extends AppCompatActivity {
                Intent a = new Intent(Main4Activity.this,Main5Activity.class);
                a.putExtra("flag",1);
                a.putExtra("name",pos);
-               Toast.makeText(Main4Activity.this,"YOU GOT!",Toast.LENGTH_LONG).show();
+               Toast.makeText(Main4Activity.this,"YOU GOT!",Toast.LENGTH_SHORT).show();
                Main4Activity.this.startActivity(a);
 
            }
@@ -64,7 +64,7 @@ public class Main4Activity extends AppCompatActivity {
                Intent b = new Intent(Main4Activity.this,Main5Activity.class);
                b.putExtra("flag",0);
                b.putExtra("name",pos);
-               Toast.makeText(Main4Activity.this,"YOU GAVE!",Toast.LENGTH_LONG).show();
+               Toast.makeText(Main4Activity.this,"YOU GAVE!",Toast.LENGTH_SHORT).show();
                Main4Activity.this.startActivity(b);
            }
        });

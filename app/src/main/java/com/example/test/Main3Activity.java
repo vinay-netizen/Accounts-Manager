@@ -15,11 +15,13 @@ import com.google.firebase.database.FirebaseDatabase;
 
 public class Main3Activity extends AppCompatActivity {
   Button button,proceed;
-    DatabaseReference x,getnamedata,getcontactdata;
+    DatabaseReference x,getnamedata,getcontactdata, getdata;
 
     EditText ed1;
     EditText ed2;
-    TextView t1,t2;
+    TextView t1,t2, t3;
+
+    setdeets x1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,24 +38,27 @@ public class Main3Activity extends AppCompatActivity {
 
        t1 = (TextView)findViewById(R.id.textView8);
        t2 = (TextView)findViewById(R.id.textView9);
+       t3 = (TextView)findViewById(R.id.textView10);
+       t3.setVisibility(View.INVISIBLE);
 
         x = FirebaseDatabase.getInstance().getReference();
 
-        getnamedata =FirebaseDatabase.getInstance().getReference();
-        getnamedata = getnamedata.child("NAME");
+        getdata =FirebaseDatabase.getInstance().getReference();
+        getdata = getdata.child("CONTACT DETAILS");
 
-        getcontactdata = FirebaseDatabase.getInstance().getReference();
-        getcontactdata = getcontactdata.child("CONTACTS");
+        x1 = new setdeets();
 
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
+                t3.setVisibility(View.VISIBLE);
                 Toast.makeText(Main3Activity.this,"CONTACT SAVED!",Toast.LENGTH_SHORT).show();
                 String name = ed1.getText().toString();
                 String phone = ed2.getText().toString();
-                getnamedata.push().setValue(name);
-                getcontactdata.push().setValue(phone);
+                x1.setPerson_name(name);
+                x1.setPerson_phone(phone);
+                getdata.push().setValue(x1);
                 t1.setText(name);
                 t2.setText(phone);
             }
