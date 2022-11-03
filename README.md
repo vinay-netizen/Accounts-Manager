@@ -1,7 +1,7 @@
 # Accounts-Manager
-Account Manager app to track transactions with friends and family
+## Account Manager app to track transactions with friends and family
 
-This is a fork of the original project carried out during my undergrad at RVCE.
+*This is a fork of the original project carried out during my undergrad at RVCE.*
 
 Accounts Manager is an android based application that manages credit amongst two
 individuals, that is, the user and any of their contact. Accounts Manager is essentially a
